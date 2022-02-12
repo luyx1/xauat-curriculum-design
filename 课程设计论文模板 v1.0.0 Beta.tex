@@ -1,0 +1,176 @@
+\documentclass[12pt,oneside,a4paper,fleqn]{ctexart}
+\usepackage[headsep=2cm,headheight=0.5cm,footskip=0cm]{geometry}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titletoc}
+\usepackage{titlesec}
+\usepackage{ctex}
+\usepackage{fancyhdr}
+\geometry{left=2.1cm,right=1.8cm,top=2.6cm,bottom=1.3cm} 
+% 页边距设置，先用geometry包再用fancyhdr包
+
+
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+\fancyhead{}
+\fancyhead[c]{\includegraphics[width=\textwidth]{figure/2.png}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%设置页眉和页脚
+
+
+\usepackage{background}
+\usepackage{dashrule}	%虚线包
+%因为没找到直接的竖直虚线，所以采用了水平虚线，然后旋转90度的方法
+\SetBgScale{1}
+\SetBgAngle{90}	%旋转了90度
+\SetBgColor{black}
+\SetBgContents{\hdashrule[-2cm][c]{\textheight}{0.5pt}{1.5mm}}
+\SetBgHshift{0cm}		%背景的水平位移
+\SetBgVshift{10cm}
+%设置装订线
+
+
+\renewcommand{\abstractname}{\textbf{
+    {\zihao{2}题目：$\times \times \times $标题}\\
+    \vspace*{1.5em}
+\zihao{4}摘\quad 要 \vspace*{0.5em}}}
+%自定义摘要
+
+
+\renewcommand{\contentsname}{\zihao{3} \heiti{目\quad 录} \vspace{0.5em}}
+%自定义目录
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%自定义目录样式%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titlecontents{section}[1cm]{\bf \zihao{-4}}{\contentslabel{2.5em}}{}{\titlerule*[0.5pc]{$\cdots$}\contentspage\hspace*{1cm}}
+\titlecontents{subsection}[2cm]{\zihao{-4}}{\contentslabel{2.5em}}{}{\titlerule*[0.5pc]{$\cdots$}\contentspage\hspace*{1cm}}
+\titlecontents{subsubsection}[3cm]{\zihao{-4}}{\contentslabel{2.5em}}{}{\titlerule*[0.5pc]{$\cdots$}\contentspage\hspace*{1cm}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%参考文献%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{cite}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%准备结束%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%标题页开始%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{titlepage}
+        
+        \heiti
+        \ 
+        \vspace{3em}
+        \begin{center}
+            \includegraphics{figure/1}\newline
+            {\zihao{0}课程设计（论文）}\\
+            \vspace{15em}
+            \noindent\makebox[70pt][c]{\zihao{-3}课程名称：}\ \ \underline{\makebox[10em]{\zihao{4}$\times \times \times $}}\\
+            \vspace{1em}
+            \makebox[70pt][s]{\zihao{-3}题目：}\ \ \underline{\makebox[10em]{\zihao{4} $\times \times \times $}}\\
+            \vspace{1em}
+            \makebox[70pt][s]{\zihao{-3}院(系)：}\ \ \underline{\makebox[10em]{\zihao{4} $\times \times \times $工程学院}}\\
+            \vspace{1em}
+            \makebox[70pt][s]{\zihao{-3}专业班级：}\ \ \underline{\makebox[10em]{\zihao{4}$\times \times \times $}}\\
+            \vspace{1em}
+            \makebox[70pt][s]{\zihao{-3}姓名：}\ \ \underline{\makebox[10em]{\zihao{4}$\times \times \times $}}\\
+            \vspace{1em}
+            \makebox[70pt][s]{\zihao{-3}学号：}\ \ \underline{\makebox[10em]{\zihao{4} $\times \times \times $}}\\
+            \vspace{1em}
+            \makebox[70pt][s]{\zihao{-3}指导教师：}\ \ \underline{\makebox[10em]{\zihao{4}$\times \times \times $}}\\
+            \vspace{10em}
+            {\zihao{4}2022年1月5号}
+        \end{center}
+    \end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%标题页结束%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%摘要页开始%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+    %\thispagestyle{empty}
+    \addcontentsline{toc}{section}{摘要}
+    \songti
+    \zihao{-4}
+    \begin{spacing}{1.25}
+        摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+        \newline
+        \newline
+        \textbf{关键字：}{$\times \times \times $}
+    \end{spacing}
+    \pagenumbering{Roman}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%摘要页结束%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%目录页开始%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\pagenumbering{arabic}
+
+
+
+
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%目录页结束%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%正文开始%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}
+
+\vspace{0.5em} \section{\heiti $\times \times \times $} \vspace{0.5em}\begin{spacing}{1.25}
+
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+
+\end{spacing}\vspace{0.5em} \subsection{\heiti $\times \times \times $}\begin{spacing}{1.25}
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+
+\end{spacing}\vspace{0.5em} \subsection{\heiti $\times \times \times $}\begin{spacing}{1.25}
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+
+\end{spacing}\vspace{0.5em} \subsection{\heiti $\times \times \times $}\begin{spacing}{1.25}
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+\end{spacing}\vspace{0.5em} \section{\heiti $\times \times \times $} \vspace{0.5em}\begin{spacing}{1.25}
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+\end{spacing}\vspace{0.5em} \subsection{\heiti $\times \times \times $}\begin{spacing}{1.25}
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+
+
+\end{spacing}\vspace{0.5em} \subsection{\heiti $\times \times \times $}\begin{spacing}{1.25}
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+\end{spacing}\vspace{0.5em} \subsection{\heiti $\times \times \times $}\begin{spacing}{1.25}
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+\end{spacing}\vspace{0.5em} \section*{\heiti 参考文献} \vspace{0.5em}\begin{spacing}{1.25}\addcontentsline{toc}{section}{参考文献}
+    \begin{thebibliography}{99}  
+
+        \bibitem{ref1}郭莉莉,白国君,尹泽成,魏惠芳. “互联网+”背景下沈阳智慧交通系统发展对策建议[A]. 中共沈阳市委、沈阳市人民政府.第十七届沈阳科学学术年会论文集[C].中共沈阳市委、沈阳市人民政府:沈阳市科学技术协会,2020:4.
+        \bibitem{ref2}陈香敏,魏伟,吴莹. “文化+人工智能”视阈下文化创意产业融合发展实践及路径研究[A]. 中共沈阳市委、沈阳市人民政府.第十七届沈阳科学学术年会论文集[C].中共沈阳市委、沈阳市人民政府:沈阳市科学技术协会,2020:4.
+        \bibitem{ref3}田晓曦,刘振鹏,彭宝权. 地方高校开展教育人工智能深度融合的路径探究[A]. 中共沈阳市委、沈阳市人民政府.第十七届沈阳科学学术年会论文集[C].中共沈阳市委、沈阳市人民政府:沈阳市科学技术协会,2020:5.
+        \bibitem{ref4}柏卓君,潘勇,李仲余.彩色多普勒超声在早期胚胎停育诊断中的应用[J].影像研究与医学应用,2020,4(18):129-131.
+        \bibitem{ref5}杨芸.我院2018年人血白蛋白临床应用调查与分析[J].上海医药,2020,41(17):34-35+74.
+        \bibitem{ref6}高小峰,徐涛,胡昱,刘春风,乔雨,周欣竹.现场浇筑白鹤滩大坝混凝土强度性能试验研究[J].浙江工业大学学报,2022,50(01):102-110.
+        \end{thebibliography}
+\end{spacing}\vspace{0.5em} \section*{\heiti 附录} \vspace{0.5em}\begin{spacing}{1.25}\addcontentsline{toc}{section}{附录}
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+\end{spacing}\vspace{0.5em} \section*{\heiti 致谢} \vspace{0.5em}\begin{spacing}{1.25}\addcontentsline{toc}{section}{致谢}
+摘要又称概要、内容提要，意思是摘录要点或摘录下来的要点。 [1]  摘要是以提供文献内容梗概为目的，不加评论和补充解释，简明、确切地记述文献重要内容的短文。其基本要素包括研究目的、方法、结果和结论。具体地讲就是研究工作的主要对象和范围，采用的手段和方法，得出的结果和重要的结论，有时也包括具有情报价值的其它重要的信息。
+\end{spacing}\end{document}
